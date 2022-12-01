@@ -1,0 +1,110 @@
+﻿<!--تفاصيل المدفوعات-->
+<card title="تفاصيل المدفوعات" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+
+                <div class="form-group">
+                    <lable>طريقة الدفع</lable>
+                    @Html.Editor("PaymentDetails.PaymentMethod", "SupplierPaymentMethodEnumList",
+                    new
+                       {
+                             htmlAtt = new
+                           {
+                               @class = "form-control",
+                               @data_bind = "value:PaymentDetails.PaymentMethod,event:{change:ChangePaymentMethod}",
+                           }
+                       })
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <lable>المبلغ المدفوع</lable>
+                    <input type="text" class="form-control" data-bind="value:PaymentDetails.PaymentAmount" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <lable>تاريخ الدفع</lable>
+                    <input class="form-control dateSamll " data-bind="value:PaymentDetails.PaymentDate" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <lable>رقم الايصال</lable>
+                    <input type="text" class="form-control" data-bind="value:PaymentDetails.RecieptNumber" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <lable>الـبــيــان</lable>
+                    <textarea class="form-control" rows="3" cols="5" data-bind="value:PaymentDetails.Description"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <lable>اختر الحساب</lable>
+                    @Html.Editor("PaymentDetails.SafeAccNum", "SafeAccountList", new
+               {
+                   htmlAtt = new
+                   {
+                       @class = "form-control",
+                       @data_bind = "value:PaymentDetails.SafeAccNum,visible:PaymentDetails.IsSafe"
+                   }
+               })
+
+                    @Html.Editor("PaymentDetails.BankAccNum", "BankAccountList", new
+               {
+                   htmlAtt = new
+                   {
+                       @class = "form-control",
+                       @data_bind = "value:PaymentDetails.BankAccNum,visible:PaymentDetails.IsBank || PaymentDetails.IsCheck"
+                   }
+               })
+
+
+                </div>
+            </div>
+            <div class="col-4" data-bind="visible:PaymentDetails.IsCheck">
+                <div class="form-group">
+                    <lable>رقم الشيك</lable>
+                    <input type="text" class="form-control" data-bind="value:PaymentDetails.CheckNum" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- خيارات الشيك تاريخ الكتابة وتاريخ الاستحقاق-->
+    <div class="container">
+        <div class="row">
+            <div class="col-4" data-bind="visible:PaymentDetails.IsCheck">
+                <div class="form-group">
+                    <lable>تاريخ التحرير</lable>
+                    <input type="text" class="form-control dateSamll" data-bind="value:PaymentDetails.WritingDate" />
+                </div>
+            </div>
+
+            <div class="col-4" data-bind="visible:PaymentDetails.IsCheck">
+                <div class="form-group">
+                    <lable>تاريخ الاستحقاق</lable>
+                    <input type="text" class="form-control dateSamll" data-bind="value:PaymentDetails.PaymentDueDate" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-footer text-center">
+        <button class="btn btn-primary" data-bind="click:Save"> حفظ</button>
+    </div>
+</card>

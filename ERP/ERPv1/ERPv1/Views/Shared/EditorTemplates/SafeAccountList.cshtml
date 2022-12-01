@@ -1,0 +1,17 @@
+﻿@inject ERPv1.Data.ApplicationDbContext _dbcontex
+@model dynamic
+@{ 
+    var Safe = _dbcontex.AccountChart.Where(x=>x.ParentAcNum== "1210000000").Select(x => new SelectListItem
+    {
+        Value = x.AccNum.ToString(),
+        Text = x.AccountName +" - " + x.AccountNameAr + " " +"( "+x.Balance+" )",
+    }
+    ).OrderBy(x => x.Text).ToList();
+
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+
+}
+@Html.DropDownList("", Safe, "--اختار--", htmlAtt)
+

@@ -1,0 +1,17 @@
+﻿@inject ERPv1.Data.ApplicationDbContext _dbcontex
+@model dynamic
+@{ 
+    var Unit = _dbcontex.UnitMeasures.Select(x => new SelectListItem
+    {
+        Value = x.Id.ToString(),
+        Text = x.UnitMeasureName
+    }
+    ).OrderBy(x => x.Text).ToList();
+
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+
+}
+@Html.DropDownList("", Unit, "--اختار--", htmlAtt)
+

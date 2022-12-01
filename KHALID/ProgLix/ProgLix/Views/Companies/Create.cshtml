@@ -1,0 +1,91 @@
+﻿@model ProgLix.Models.Company
+
+@{
+    ViewData["Title"] = "Create";
+    //List<SelectListItem> x = new List<SelectListItem>();
+    //x.Add(new SelectListItem { Text = "public", Value = "public" });
+    //x.Add(new SelectListItem { Text = "private", Value = "private" });
+
+}
+
+<h1>Create</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CName" class="control-label"></label>
+                <input asp-for="CName" class="form-control" />
+                <span asp-validation-for="CName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ctype" class="control-label"></label>
+                @*@Html.ListBoxFor(model => model.Ctype, x, new {@class="form-control" })*@
+                <select asp-for="Ctype" class="form-control">
+                    <option>private</option>
+                    <option>public</option>
+                </select>
+                <span asp-validation-for="Ctype" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="confEmail" class="control-label"></label>
+                <input asp-for="confEmail" class="form-control" />
+                <span asp-validation-for="confEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Curl" class="control-label"></label>
+                <input asp-for="Curl" class="form-control" />
+                <span asp-validation-for="Curl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Edate" class="control-label"></label>
+                <input asp-for="Edate" class="form-control" />
+                <span asp-validation-for="Edate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="confPassword" class="control-label"></label>
+                <input asp-for="confPassword" class="form-control" />
+                <span asp-validation-for="confPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Capital" class="control-label"></label>
+                <input asp-for="Capital" class="form-control" />
+                <span asp-validation-for="Capital" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="imgFile" class="control-label"></label>
+                @*<input asp-for="cLogo" class="form-control" />*@
+                <input type="file" name="imgFile" id="imgFile" class="form-control-file" />
+                <span asp-validation-for="cLogo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

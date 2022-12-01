@@ -1,0 +1,25 @@
+﻿@page "/Employee/{Id}"
+@inherits EmployeeByIdBase
+
+<div class="text-center">
+    <div class="card">
+        <div class="card-header">
+            <h2>@Employee.FirstName @Employee.LastName</h2>
+        </div>
+        <div class="card-body">
+            <img class="imageThumbnail" src="images/@Employee.PhotoName" />
+            <h4>@Employee.DateOfBrith</h4>
+            <h4>@Employee.Email</h4>
+            
+            <h4>@Employee.Gender</h4>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary">Back</button>
+            <button class="btn btn-primary">Home</button>
+            <button class="btn btn-primary">Delete</button>
+
+        </div>
+    </div>
+</div>
+
+

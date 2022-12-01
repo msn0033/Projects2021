@@ -1,0 +1,50 @@
+﻿@model TourTest.ToursModule.Models.Client
+
+@{
+    ViewData["Title"] = "Create";
+}
+    <form asp-action="Create">
+        <div class="card">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="card-header bg-primary text-white"><h2>New Client</h2></div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label asp-for="NameClient" class="control-label"></label>
+                                <input asp-for="NameClient" class="form-control" />
+                                <span asp-validation-for="NameClient" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label asp-for="Phone" class="control-label"></label>
+                                <input asp-for="Phone" class="form-control" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                  <input type="submit" value="Create" class="btn btn-primary" />
+                  <a asp-action="Index" class="btn btn-warning float-right">Back to List</a>
+                
+            </div>
+        </div>
+    </form>
+       
+
+
+
+
+
+  
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

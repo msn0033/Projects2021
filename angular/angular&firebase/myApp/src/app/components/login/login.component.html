@@ -1,0 +1,35 @@
+
+<form #f="ngForm" (ngSubmit)="OnSignIn(f)">
+    <div class="container-fluid">
+        <div class="card mx-auto col-sm-12 col-md-5 col-lg-5 col-xl-4" style="padding-top: 0;">
+            <div class="card-header">
+                <h4 class="text-center">SignIn</h4>
+            </div>
+            <div class="card-body">
+                <br>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" #_email="ngModel" class="form-control" name="email" id="email" ngModel email
+                        required>
+                    <p style="color:red;" *ngIf="_email.errors?.required  && _email.touched"> الايميل مطلوب*</p>
+                    <p style="color:red;" *ngIf="_email.errors?.email  && _email.touched"> الايميل خطاء*</p>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" #_password="ngModel" class="form-control" name="password" ngModel
+                        id="password" required minlength="6">
+                    <p style="color:red;" *ngIf="_password.errors?.required  && _password.touched"> رجاء ادخال الباسورد*
+                    </p>
+                    <p style="color:red;" *ngIf="_password.errors?.minlength  && _password.touched">
+                        {{_password.errors?.minlength.requiredLength}} يجب ان يكون اكثر من *</p>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-primary" [disabled]="f.invalid">send</button>
+            </div>
+        </div>
+    </div>
+</form>

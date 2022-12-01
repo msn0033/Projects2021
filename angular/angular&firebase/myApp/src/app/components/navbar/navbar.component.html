@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" routerLink="/">Navbar</a>
+                    <button (click)="navbarshow()" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" [class.show]="Ispoen" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active"
+                                    [routerLinkActiveOptions]={exact:true}>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" *ngIf="!IsUser" routerLink="login"
+                                    routerLinkActive="active">Login</a>
+                            </li>
+                            <li class="nav-item" *ngIf="!IsUser">
+                                <a class="nav-link" routerLink="signup" routerLinkActive="active">Signup</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" *ngIf="IsUser" routerLink="cart" routerLinkActive="active">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" *ngIf="IsUser" routerLink="goods" routerLinkActive="active">Goods</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" *ngIf="IsUser" routerLink="account" routerLinkActive="active">Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" *ngIf="IsUser" routerLink="order" routerLinkActive="active">Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-danger" *ngIf="IsUser" (click)="LogOut()">Logout</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@page "/"
+@inherits             Pages.EmployeeList
+@using EmployeeManagement.Web.Pages.dialog
+@using EmployeeManagement.Web.Pages.EmployeeModule.List.child
+<h3>Employee List</h3>
+<button class="btn btn-primary" @onclick="@(e=>popup=true)">Add New</button>
+<UserAddNew popup="popup" popupfalse="@(e=>popup=false)"></UserAddNew>
+<div class="alert-info">Counter:- @Counter</div>
+
+<input type="checkbox" @bind="ShowFooter" id="showFooter" />
+<label for="showFooter">Show Footer</label>
+
+@if (Employees == null)
+{
+
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="card-deck">
+
+
+        @foreach (var Employee in Employees)
+        {
+            <DisplayEmployee Employee="Employee" ShowFooter="ShowFooter" EmployeeSelection="counterpluse" stringDelete="AfterDeleteGetList"></DisplayEmployee>
+        }
+    </div>
+}
+
+
+

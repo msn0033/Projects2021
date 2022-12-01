@@ -1,0 +1,43 @@
+<form #form="ngForm" novalidate autocomplete="off" (ngSubmit)="onSubmit(form)">
+    <input type="number" hidden name="paymentDetalisId" [value]="service.formData.paymentDetalisId" #paymentDetalisId />
+
+
+    <div class="form-group Card Oner Name">
+        <label class="form-label"> Card Oner Name</label>
+        <input #cardOwnerName="ngModel" class="form-control form-control-lg" name="cardOnerName"
+            placeholder="Card Full Name" [(ngModel)]="service.formData.cardOwnerName" required
+            [class.invalid]="cardOwnerName.invalid && cardOwnerName.touched" />
+    </div>
+
+    <div class="form-group Card Number">
+        <label class="form-label"> Card Number</label>
+        <input #cardNumber="ngModel" class="form-control form-control-lg" name="CardNumber"
+            placeholder="16 Digit Card Number" [(ngModel)]="service.formData.cardNumber" />
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group Security Code">
+                <label class="form-label">Security Code</label>
+                <input #securityCode="ngModel" class="form-control form-control-lg" name="securityCode"
+                    placeholder="3 Digit" [(ngModel)]="service.formData.securityCode" />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="form-label"> Expiration Date</label>
+                <input #expirationDate="ngModel" class="form-control form-control-lg" name="expirationDate"
+                    placeholder="mm/yy" [(ngModel)]="service.formData.expirationDate" />
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <div class="col-12">
+        <div class="form-group">
+            <button class="btn btn-info  btn-lg btn-block form-control">save</button>
+        </div>
+    </div>
+
+</form>

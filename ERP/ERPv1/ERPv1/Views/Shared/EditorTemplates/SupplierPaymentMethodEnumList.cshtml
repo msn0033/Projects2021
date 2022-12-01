@@ -1,0 +1,9 @@
+﻿@using ERPv1.ERP.PurchasesModule.Model
+@model SupplierPaymentMethodEnum
+@{ 
+    var option = ERPv1.Infrastructure.Extensions.EnumExtension.GetEnumSelectList<SupplierPaymentMethodEnum>().Where(x=>x.Value !="10").ToList();
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+}
+@Html.DropDownList("",option,htmlAtt)

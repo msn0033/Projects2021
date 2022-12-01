@@ -1,0 +1,185 @@
+﻿@model ERP.PurchasesModule.ViewModel.PurchaseContainer
+
+@using Newtonsoft.Json
+
+@{ string data = JsonConvert.SerializeObject(Model);}
+
+@{
+    ViewData["Title"] = "NewPurchase";
+}
+
+<form enctype="multipart/form-data" method="post">
+    <div data-bind="visible:IsMessageAreaVisible">
+        <card title="قائمة الاخطاء" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+            <ul data-bind="foreach:Messages">
+                <li class="alert-danger" data-bind="text:$data"></li>
+            </ul>
+
+        </card>
+    </div>
+    <div data-bind="visible:IsWaitingAreaVisible" class="preload fa fa-spin fa-spinner" style="font-size:150px">
+
+    </div>
+    <div data-bind="visible:IsDetailAreaVisible">
+        <card title="بيانات المورد" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                        <div class="form-group">
+                            <lable>اسم المورد</lable>
+                            <input class="form-control" disabled="disabled" data-bind="value:SupplierData.SupplierName" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <lable>رقم التلفون</lable>
+                            <input class="form-control" disabled="disabled" data-bind="value:SupplierData.Phone" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <lable>الرصيد</lable>
+                            <input class="form-control" disabled="disabled" data-bind="value:SupplierData.Balance" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </card>
+        <card title="تفاصيل المشتريات " header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+            <table class="table table-bordered table-striped table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>المنتج</th>
+                        <th>الكمية الحالية </th>
+                        <th>الكمية</th>
+                        <th>السعر</th>
+                        <th>المجموع</th>
+                        <th>سريال نبر</th>
+                        <th>
+                            <button class="btn btn-primary" data-bind="click:AddNewItem">
+                                <i class="fa fa-plus-circle"></i>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:PurchasesDetails">
+
+                    <tr>
+                        <td>
+                            @Html.Editor("StoreItemId", "StoreItems", new { htmlAtt = new { @data_bind = "value:StoreItemId, event:{change:ChangeItem}", @class = "form-control" } })
+                        </td>
+                        <td><span data-bind="text:CurrentQTY"></span></td>
+                        <td><input class="form-control" type="text" data-bind="value:QTY,event:{change:$parent.ApplyVAT}" /></td>
+                        <td><input class="form-control" type="text" data-bind="value:UnitPrice,event:{change:$parent.ApplyVAT}" /></td>
+                        <td><span type="text" data-bind="text:Total"></span></td>
+                        <td><textarea class="form-control" rows="1" cols="3" data-bind="value:SN"></textarea></td>
+                        <td><button class="btn btn-danger" data-bind="click:$parent.RemoveItem"><i class="fa fa-minus-circle"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </card>
+        <card title="بيانات الفاتورة" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+
+                    <div class="form-group">
+                        <lable>الإجمالي</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:PurchaseSummary.TotalAmount" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>تاريخ الفاتورة</lable>
+                        <input class="form-control dateSamll" data-bind="value:PurchaseSummary.PurchaseDate" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>رقم الفاتورة</lable>
+                        <input class="form-control" data-bind="value:PurchaseSummary.InvoiceNum" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+
+                    <div class="form-group">
+                        <lable>ضريبة</lable>
+                        <input type="checkbox" class="form-control" data-bind="checked:PurchaseSummary.IsVAT,event:{change:ApplyVAT}" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>اجمالي الضريبة </lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:PurchaseSummary.VATAmount" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>الاجمالي شامل الضريبة</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:PurchaseSummary.TotalAmountWithVAT" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+
+                    <div class="form-group">
+                        <lable>العملة</lable>
+                        @Html.EditorFor(x => x.PurchaseSummary.CurrencyId, "CurrencyList", new { htmlAtt = new { @class = "form-control", data_bind = "value:PurchaseSummary.CurrencyId" } })
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label asp-for="PurchaseSummary.RepositoryId" class="control-label"></label>
+                        @Html.EditorFor(x => x.PurchaseSummary.RepositoryId, "RepositoryList", new { htmlAtt = new { @class = "form-control",data_bind= "value:PurchaseSummary.RepositoryId" } })
+                        <span asp-validation-for="PurchaseSummary.RepositoryId"></span>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="form-group">
+                        <lable>أرفاق صورة </lable>
+                        <input type="file" class="form-control-file" id="InvoiceFile" />
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-group">
+                        <lable> اضافة تفاصيل</lable>
+                        <textarea class="form-control" data-bind="value:PurchaseSummary.Description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary" data-bind="click:Save">حـفـظ</button>
+                </div>
+
+</card>
+    </div>
+
+</form>
+
+    @section Scripts {
+
+        <script src="~/lib/knockout/knockout-3.5.0.js"></script>
+        <script src="~/lib/knockout.mapping/knockout.mapping.js"></script>
+        <script src="~/App/PurchaseVM.js" asp-append-version="true"></script>
+        <script>
+            var Purchase = new PurchaseVM(@Html.Raw(data));
+            ko.applyBindings(Purchase);
+        </script>
+    }
+ 

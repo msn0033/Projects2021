@@ -1,0 +1,10 @@
+﻿@using ERPv1.ERP.SalesModule.Model
+@model ClientPaymentMethodEnum
+@{ 
+    var option = ERPv1.Infrastructure.Extensions.EnumExtension.GetEnumSelectList
+        <ClientPaymentMethodEnum>().Where(x=>x.Value !="10").ToList();
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+}
+@Html.DropDownList("",option,htmlAtt)

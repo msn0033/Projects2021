@@ -1,0 +1,94 @@
+﻿@model ERPv1.ERP.PurchasesModule.ViewModel.SupplierPayment.SupplierPaymentContainer
+
+@using Newtonsoft.Json
+@{ string data = JsonConvert.SerializeObject(Model);}
+@{
+    ViewData["Title"] = "SupplierPayment";
+}
+<div data-bind="visible:IsMessageAreaVisible">
+    <card title="قائمة الاخطاء" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+        <ul data-bind="foreach:Messages">
+            <li class="alert-danger" data-bind="text:$data"></li>
+        </ul>
+
+    </card>
+</div>
+<div data-bind="visible:IsWaitingAreaVisible" class="preload fa fa-spin fa-spinner" style="font-size:150px">
+
+</div>
+
+<div data-bind="visible:IsDetailAreaVisible">
+    <!--بيانات المورد-->
+    <card title="بيانات المورد" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+
+                    <div class="form-group">
+                        <lable>اسم المورد</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:SupplierData.SupplierName" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>رقم التلفون</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:SupplierData.Phone" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>الرصيد</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:SupplierData.Balance" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </card>
+    <!--تفاصيل الرصيد-->
+    <card title="تفاصيل الرصيد " header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+        <table class="table table-bordered table-striped table-hover table-sm">
+            <thead>
+                <tr>
+                    <th>العملة</th>
+                    <th>الرصيد  </th>
+                    <th>الرصيد بالعملة المحلية</th>
+                    <th>سعر الصرف</th>
+
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:SupplierBalanceDetails">
+
+                <tr style="cursor:pointer" data-bind="click:$parent.SelectBalance,css:{selected:CurrencyId() ==$parent.SelectedBalance.CurrencyId()}">
+
+                    <td><span data-bind="text:CurrencyAbbr"></span></td>
+
+                    <td><span data-bind="text:Amount"></span></td>
+
+                    <td><span data-bind="text:LocalAmount"></span></td>
+
+                    <td><span data-bind="text:Rate"></span></td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </card>
+
+    <!--تفاصيل المدفوعات-->
+    <vc:supplier-payment-method-components></vc:supplier-payment-method-components>
+</div>
+@section Scripts{
+
+    <script src="~/lib/knockout/knockout-3.5.0.js"></script>
+    <script src="~/lib/knockout.mapping/knockout.mapping.js"></script>
+    <script src="~/App/SupplierPayment.js" asp-append-version="true"></script>
+    <script>
+        var SupplierPayment = new SupplierPaymentVM(@Html.Raw(data));
+        ko.applyBindings(SupplierPayment);
+    </script>
+}
+
+

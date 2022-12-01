@@ -1,0 +1,71 @@
+﻿@model ProgLix.Models.Company
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Com_Id" />
+            <div class="form-group">
+                <label asp-for="CName" class="control-label"></label>
+                <input asp-for="CName" class="form-control" />
+                <span asp-validation-for="CName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ctype" class="control-label"></label>
+                @*@Html.ListBoxFor(model => model.Ctype, x, new {@class="form-control" })*@
+                <select asp-for="Ctype" class="form-control">
+                    <option>private</option>
+                    <option>public</option>
+                </select>
+                <span asp-validation-for="Ctype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" readonly />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Curl" class="control-label"></label>
+                <input asp-for="Curl" class="form-control" />
+                <span asp-validation-for="Curl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Edate" class="control-label"></label>
+                <input asp-for="Edate" class="form-control" />
+                <span asp-validation-for="Edate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Capital" class="control-label"></label>
+                <input asp-for="Capital" class="form-control" />
+                <span asp-validation-for="Capital" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cLogo" class="control-label"></label>
+                @*<input asp-for="cLogo" class="form-control" />*@
+                <input type="file" name="imgFile" id="imgFile" class="form-control-file" />
+
+                <span asp-validation-for="cLogo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

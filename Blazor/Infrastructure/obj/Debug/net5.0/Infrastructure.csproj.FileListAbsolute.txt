@@ -1,0 +1,17 @@
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\EmployeeManagement.Models.dll
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\ViewModel.Models.dll
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\EmployeeManagement.Models.pdb
+D:\PROJECT\Blazor\Infrastructure\bin\Debug\net5.0\ViewModel.Models.pdb
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.csprojAssemblyReference.cache
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+D:\PROJECT\Blazor\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb

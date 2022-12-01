@@ -1,0 +1,95 @@
+﻿@model ERPv1.ERP.CurrentAssetModules.Inventory.ViewModel.StoreItemCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+} 
+
+<form asp-action="Create">
+      <card title="انشاء صنف" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+          <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+          <div class="container">
+              <div class="row">
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="BarCode" class="control-label"></label>
+                          <input asp-for="BarCode" class="form-control" />
+                          <span asp-validation-for="BarCode" class="text-danger"></span>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="Name" class="control-label"></label>
+                          <input asp-for="Name" class="form-control" />
+                          <span asp-validation-for="Name" class="text-danger"></span>
+                      </div>
+
+                  </div>
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="NameAr" class="control-label"></label>
+                          <input asp-for="NameAr" class="form-control" />
+                          <span asp-validation-for="NameAr" class="text-danger"></span>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="ProductTypeId" class="control-label"></label>
+                          @Html.EditorFor(x => x.ProductTypeId, "ProductTypesList", new { htmlAtt = new { @class = "form-control" } })
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="BrandId" class="control-label"></label>
+                          @Html.EditorFor(x => x.BrandId, "BrandList", new { htmlAtt = new { @class = "form-control" } })
+                      </div>
+
+                  </div>
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="UnitMeasureId" class="control-label"></label>
+                          @Html.EditorFor(x => x.UnitMeasureId, "UnitMeasuresList", new { htmlAtt = new { @class = "form-control" } })
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="WithSN" class="control-label"></label>
+                          <input class="form-control" asp-for="WithSN" />
+
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-group">
+                          <label asp-for="StoreSystemEnums" class="control-label"></label>
+                          @Html.EditorFor(x => x.StoreSystemEnums, "StoreSystemEnumList", new { htmlAtt = new { @class = "form-control" } })
+                          <span asp-validation-for="StoreSystemEnums" class="text-danger"></span>
+                      </div>
+
+                  </div>
+                  <div class="col-4">
+
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="card-footer text-center">
+              <input type="submit" class="btn btn-primary" value="حفظ" />
+          </div>
+
+      </card>
+
+</form>
+
+

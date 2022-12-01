@@ -1,0 +1,30 @@
+﻿@if (ProgLix.Controllers.CompaniesController.username == "no")
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="HomePage">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="Login">Login</a>
+    </li>
+}
+
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="Index">Company</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Product</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Companies" asp-action="Login">Logout</a>
+    </li>
+}

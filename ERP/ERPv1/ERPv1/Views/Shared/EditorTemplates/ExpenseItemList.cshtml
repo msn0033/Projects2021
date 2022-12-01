@@ -1,0 +1,20 @@
+﻿@inject ERPv1.Data.ApplicationDbContext _dbcontex
+@model dynamic
+@{ 
+    var ExpenseItems = _dbcontex.ExpenseItems
+       
+        
+        .Select(x => new SelectListItem
+        {
+            Value = x.Id.ToString(),
+            Text = x.ExpenseName+" - "+x.AccNum
+        }
+    ).OrderBy(x => x.Text).ToList();
+
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+
+}
+@Html.DropDownList("", ExpenseItems, "--اختار--",htmlAtt)
+

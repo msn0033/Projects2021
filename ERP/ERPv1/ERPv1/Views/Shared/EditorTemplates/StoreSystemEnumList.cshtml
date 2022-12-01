@@ -1,0 +1,9 @@
+﻿@using ERPv1.ERP.CurrentAssetModules.Inventory.Model.Main
+@model StoreSystemEnum
+@{ 
+    var option = ERPv1.Infrastructure.Extensions.EnumExtension.GetEnumSelectList<StoreSystemEnum>().Where(x=>x.Text !="Credit");
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+}
+@Html.DropDownList("",option,htmlAtt)

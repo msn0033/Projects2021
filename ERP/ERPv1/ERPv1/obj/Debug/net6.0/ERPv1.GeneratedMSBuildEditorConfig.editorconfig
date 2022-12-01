@@ -1,0 +1,408 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ERPv1
+build_property.RootNamespace = ERPv1
+build_property.ProjectDir = E:\PROJECT\Web\ERP\ERPv1\ERPv1\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\PROJECT\Web\ERP\ERPv1\ERPv1
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/ERPSettings/Views/Branches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRVJQU2V0dGluZ3NcVmlld3NcQnJhbmNoZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/ERPSettings/Views/Branches/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRVJQU2V0dGluZ3NcVmlld3NcQnJhbmNoZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/ERPSettings/Views/Branches/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRVJQU2V0dGluZ3NcVmlld3NcQnJhbmNoZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/ERPSettings/Views/Branches/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRVJQU2V0dGluZ3NcVmlld3NcQnJhbmNoZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/ERPSettings/Views/Branches/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRVJQU2V0dGluZ3NcVmlld3NcQnJhbmNoZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Expenses/CreateExpenseItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZXNcQ3JlYXRlRXhwZW5zZUl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Expenses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Expenses/NewExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZXNcTmV3RXhwZW5zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/ExpenseTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZVR5cGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/ExpenseTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZVR5cGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/ExpenseTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZVR5cGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/ExpenseTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZVR5cGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/ExpenseTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcRXhwZW5zZVR5cGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/NP/ManageNP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcTlBcTWFuYWdlTlAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Supplier/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Supplier/NewPurchase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcU3VwcGxpZXJcTmV3UHVyY2hhc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Supplier/NewSupplierPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcU3VwcGxpZXJcTmV3U3VwcGxpZXJQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/Supplier/SupplierStatment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcU3VwcGxpZXJcU3VwcGxpZXJTdGF0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Expenditure/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXhwZW5kaXR1cmVcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/AccountChart/CreateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXEFjY291bnRDaGFydFxDcmVhdGVBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/AccountChart/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXEFjY291bnRDaGFydFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/AccountChart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXEFjY291bnRDaGFydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/Journal/CreateJournal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXEpvdXJuYWxcQ3JlYXRlSm91cm5hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/OpenBalance/NewBalance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXE9wZW5CYWxhbmNlXE5ld0JhbGFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/Report/AccountStatment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXFJlcG9ydFxBY2NvdW50U3RhdG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/GLArea/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcR0xBcmVhXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/Clients/ClientPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXENsaWVudHNcQ2xpZW50UGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/Clients/ClientStatment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXENsaWVudHNcQ2xpZW50U3RhdG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/Clients/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXENsaWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/Clients/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXENsaWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/Clients/NewSale.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXENsaWVudHNcTmV3U2FsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/NR/CheckInBank.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXE5SXENoZWNrSW5CYW5rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/NR/CheckInSafe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXE5SXENoZWNrSW5TYWZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/NR/CollectCashCheck.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXE5SXENvbGxlY3RDYXNoQ2hlY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/SalesArea/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZXNBcmVhXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/Brands/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcQnJhbmRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/Brands/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcQnJhbmRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/Brands/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcQnJhbmRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/Brands/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcQnJhbmRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/Brands/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcQnJhbmRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/ProductTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcUHJvZHVjdFR5cGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/ProductTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcUHJvZHVjdFR5cGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/ProductTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcUHJvZHVjdFR5cGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/ProductTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcUHJvZHVjdFR5cGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/ProductTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcUHJvZHVjdFR5cGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/StoreItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcU3RvcmVJdGVtXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/StoreItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcU3RvcmVJdGVtXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/UnitMeasures/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcVW5pdE1lYXN1cmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/UnitMeasures/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcVW5pdE1lYXN1cmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/UnitMeasures/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcVW5pdE1lYXN1cmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/UnitMeasures/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcVW5pdE1lYXN1cmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/UnitMeasures/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcVW5pdE1lYXN1cmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Areas/Store/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/AccountChartCounters/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENoYXJ0Q291bnRlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/AccountChartCounters/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENoYXJ0Q291bnRlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/AccountChartCounters/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENoYXJ0Q291bnRlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/AccountChartCounters/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENoYXJ0Q291bnRlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/AccountChartCounters/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENoYXJ0Q291bnRlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Home/ERrOrS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFUnJPclMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/Components/CurrentNP/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ3VycmVudE5QXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/Components/SupplierPaymentMethodComponents/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3VwcGxpZXJQYXltZW50TWV0aG9kQ29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/AccountChildList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xBY2NvdW50Q2hpbGRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/AccountTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xBY2NvdW50VHlwZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/BankAccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xCYW5rQWNjb3VudExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/BranchList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xCcmFuY2hMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/BrandList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xCcmFuZExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/ClientAccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDbGllbnRBY2NvdW50TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/ClientContactList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDbGllbnRDb250YWN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/ClientPaymentMethodEnum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDbGllbnRQYXltZW50TWV0aG9kRW51bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/CostCenterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDb3N0Q2VudGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/CurrencyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDdXJyZW5jeUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/CustodyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDdXN0b2R5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/ExpenseItemList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFeHBlbnNlSXRlbUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/ExpenseTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFeHBlbnNlVHlwZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/ProductTypesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xQcm9kdWN0VHlwZXNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/RepositoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xSZXBvc2l0b3J5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/SafeAccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTYWZlQWNjb3VudExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/StoreItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTdG9yZUl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/StoreSystemEnumList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTdG9yZVN5c3RlbUVudW1MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/SupplierAccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTdXBwbGllckFjY291bnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/SupplierContactList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTdXBwbGllckNvbnRhY3RMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/SupplierPaymentMethodEnumList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTdXBwbGllclBheW1lbnRNZXRob2RFbnVtTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/EditorTemplates/UnitMeasuresList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xVbml0TWVhc3VyZXNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/_edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9lZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PROJECT/Web/ERP/ERPv1/ERPv1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

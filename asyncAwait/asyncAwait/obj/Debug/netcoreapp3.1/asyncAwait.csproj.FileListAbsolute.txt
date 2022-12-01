@@ -1,0 +1,15 @@
+D:\PROJECT\asyncAwait\asyncAwait\bin\Debug\netcoreapp3.1\asyncAwait.exe
+D:\PROJECT\asyncAwait\asyncAwait\bin\Debug\netcoreapp3.1\asyncAwait.deps.json
+D:\PROJECT\asyncAwait\asyncAwait\bin\Debug\netcoreapp3.1\asyncAwait.runtimeconfig.json
+D:\PROJECT\asyncAwait\asyncAwait\bin\Debug\netcoreapp3.1\asyncAwait.runtimeconfig.dev.json
+D:\PROJECT\asyncAwait\asyncAwait\bin\Debug\netcoreapp3.1\asyncAwait.dll
+D:\PROJECT\asyncAwait\asyncAwait\bin\Debug\netcoreapp3.1\asyncAwait.pdb
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.csprojAssemblyReference.cache
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.Form1.resources
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.csproj.GenerateResource.cache
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.AssemblyInfoInputs.cache
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.AssemblyInfo.cs
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.csproj.CoreCompileInputs.cache
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.dll
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.pdb
+D:\PROJECT\asyncAwait\asyncAwait\obj\Debug\netcoreapp3.1\asyncAwait.genruntimeconfig.cache

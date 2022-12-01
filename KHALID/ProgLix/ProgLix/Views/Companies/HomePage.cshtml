@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProgLix.Models.Company>
+
+@{
+    ViewData["Title"] = "HomePage";
+}
+
+<h1>HomePage</h1>
+
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-3">
+            <div class="card " style="width: 16rem; margin-bottom:15px;">
+                <img src="~/images/@item.cLogo" class="card-img-top" alt="..." width="242" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">@item.CName</h5>
+                    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>

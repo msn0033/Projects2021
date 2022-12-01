@@ -1,0 +1,107 @@
+﻿@model ERPv1.CRM.ViewModel.ContactCreatingVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <card title="انشاء مورد جديد نظام B2C & B2B" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+        <div asp-validation-summary="All"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>اسم العميل</label>
+                        <input class="form-control" asp-for="Name" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label> اسم العميل عربي </label>
+                        <input class="form-control" asp-for="NameAr" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label> البريد الالكتروني </label>
+                        <input class="form-control" asp-for="Email" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label asp-for="Phone1"></label>
+                        <input class="form-control" asp-for="Phone1" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>رقم الجوال 2 </label>
+                        <input class="form-control" asp-for="Phone2" />
+                        <span class="text-danger" asp-validation-for="Phone2"></span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label>اختار الفرع</label>
+                        @Html.EditorFor(x => x.BranchId, "BranchList", new { htmlAtt = new { @class = "form-control" } })
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label asp-for="TaxationCard"></label>
+                        <input class="form-control" asp-for="TaxationCard" />
+                        <span class="text-danger" asp-validation-for="TaxationCard"></span>
+                    </div>
+
+                </div>
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label> انشاء عميل جديد في شجرة الحسابات بنظام<span style="color:red; font-size:large;font-weight:bold;"> B2B</span> </label>
+                        <input type="checkbox" class="form-control" disabled="disabled"  asp-for="CreateAccount" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label> اختار الحساب بنظام   <span style="color:red; font-size:large;font-weight:bold;"> B2C</span></label>
+                        @Html.EditorFor(x => x.AccNum, "ClientAccountList", new { htmlAtt = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label> اختار العملة</label>
+                        @Html.EditorFor(x => x.CurrencyId, "CurrencyList", new { htmlAtt = new { @class = "form-control" } })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-footer text-center">
+            <input type="submit" class="btn btn-primary" value="حفظ" />
+        </div>
+    </card>
+</form>

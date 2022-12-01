@@ -1,0 +1,17 @@
+﻿@inject ERPv1.Data.ApplicationDbContext _dbcontex
+@model dynamic
+@{ 
+    var account = _dbcontex.AccountChart.Where(x=>!x.IsParent).Select(x => new SelectListItem
+    {
+        Value = x.AccNum.ToString(),
+        Text = x.AccountNameAr
+    }
+    ).OrderBy(x => x.Text).ToList();
+
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+
+}
+@Html.DropDownList("", account, "--اختار--", htmlAtt)
+

@@ -1,0 +1,70 @@
+﻿@model TourTest.ToursModule.ViewModels.ClinetReservationVM
+
+@{
+    ViewData["Title"] = "Add Reservation";
+}
+<form asp-action="AddReservation">
+    <div asp-validation-summary="All"class="text-danger font-weight-bold"></div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3> Tour Details</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <input type="hidden" asp-for="Tour.Id"/>
+                        <label asp-for="Tour.NameTour"></label>
+                        <input type="text" asp-for="Tour.NameTour" class="form-control" disabled />
+                        <input type="hidden" asp-for="Tour.NameTour" class="form-control" />
+                        <span asp-validation-for="Tour.NameTour"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="Tour.TourDate"></label>
+                        <input type="text" asp-for="Tour.TourDate" class="form-control" disabled />
+                        <input type="hidden" asp-for="Tour.TourDate" class="form-control"  />
+                        <span asp-validation-for="Tour.TourDate"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="Tour.price"></label>
+                        <input type="text" asp-for="Tour.price" class="form-control"disabled />
+                        <input type="hidden" asp-for="Tour.price" class="form-control" />
+                        <span asp-validation-for="Tour.price" class="form-control"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            <h3>Reservation Details</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Client</label>
+                       @Html.EditorFor(x=>x.Tour, "ClientList", new { htmlAttributes = new { @class = "form-control" } })
+                       
+                        <span asp-validation-for="ClientId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="PaymentAmount"></label>
+                        <input type="text" asp-for="PaymentAmount" class="form-control" />
+                        <span asp-validation-for="PaymentAmount" class="text-danger"></span>
+                        <div asp-validation-summary="ModelOnly" class="text-danger font-weight-bold"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <input type="submit" value="save" class="btn btn-info" />
+        </div>
+    </div>
+</form>

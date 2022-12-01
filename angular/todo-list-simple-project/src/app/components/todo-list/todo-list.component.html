@@ -1,0 +1,8 @@
+<h1>To Do List</h1>
+<input type="text" class="form-control" (keyup.enter)="addItem(itemInput)" #itemInput>
+
+<div *ngIf="listArr" class="list-group ">
+    <button @fade *ngFor="let item of listArr" (click)="remove(item)" class="list-group-item text-start">
+        {{item}}
+    </button>
+</div>

@@ -1,0 +1,25 @@
+﻿
+<div class="bg-light border p-2 col-5 offset-1">
+    <h4 class="text-secondary">Room - @Room.Id</h4>
+    @Room.RoomName <br />
+    @Room.Price.ToString("c") <br />
+    <input type="checkbox" @bind-value="Room.IsActive"
+           checked="@(Room.IsActive ? "checked":null)" /> &nbsp;Is Active
+    <br />
+    <span> this Room is @(Room.IsActive?"Active":"InActive")</span>
+    @if (Room.IsActive)
+    {
+        @foreach (var RoomProp in Room.RoomProps)
+        {
+            <p class="mb-0">@RoomProp.Name  -  @RoomProp.Value</p>
+        }
+        <DeleteEditButton IsAdmin="true"></DeleteEditButton>
+    }
+
+</div>
+
+@code{
+    [Parameter]
+    public Room Room { get; set; }
+}
+

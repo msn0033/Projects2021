@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TourTest.ToursModule.ViewModels.CurrentTourVM>
+
+@{
+    ViewData["Title"] = "TourList";
+}
+
+<h1>TourList</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameTour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TourDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationCount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameTour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TourDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationCount)
+            </td>
+            <td>
+                <a asp-action="AddReservation" asp-route-Id="@item.Id">Add Reservation</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

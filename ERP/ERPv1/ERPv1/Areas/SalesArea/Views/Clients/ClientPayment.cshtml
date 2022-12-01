@@ -1,0 +1,204 @@
+﻿@model ERPv1.ERP.SalesModule.ViewModel.Payment.ClientPaymentContainer
+
+@using Newtonsoft.Json
+@{ string data = JsonConvert.SerializeObject(Model);}
+@{
+    ViewData["Title"] = "ClientPayment";
+}
+<div data-bind="visible:IsMessageAreaVisible">
+    <card title="قائمة الاخطاء" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+        <ul data-bind="foreach:Messages">
+            <li class="alert-danger" data-bind="text:$data"></li>
+        </ul>
+
+    </card>
+</div>
+<div data-bind="visible:IsWaitingAreaVisible" class="preload fa fa-spin fa-spinner" style="font-size:150px">
+
+</div>
+
+<div data-bind="visible:IsDetailAreaVisible">
+    <!--بيانات العميل-->
+    <card title="بيانات العميل" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+
+                    <div class="form-group">
+                        <lable>اسم العميل</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:ClientData.ClientName" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>رقم التلفون</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:ClientData.Phone" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>الرصيد</lable>
+                        <input class="form-control" disabled="disabled" data-bind="value:ClientData.Balance" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </card>
+    <!--تفاصيل الرصيد-->
+    <card title="تفاصيل الرصيد " header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+        <table class="table table-bordered table-striped table-hover table-sm">
+            <thead>
+                <tr>
+                    <th>العملة</th>
+                    <th>الرصيد  </th>
+                    <th>الرصيد بالعملة المحلية</th>
+                    <th>سعر الصرف</th>
+
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:ClientBalanceDetails">
+
+                <tr style="cursor:pointer" data-bind="click:$parent.SelectBalance,css:{selected:CurrencyId() ==$parent.SelectedBalance.CurrencyId()}">
+
+                    <td><span data-bind="text:CurrencyAbbr"></span></td>
+
+                    <td><span data-bind="text:Amount"></span></td>
+
+                    <td><span data-bind="text:LocalAmount"></span></td>
+
+                    <td><span data-bind="text:Rate"></span></td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </card>
+
+    <!--تفاصيل المدفوعات-->
+    <card title="تفاصيل المدفوعات" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+
+                    <div class="form-group">
+                        <lable>طريقة الدفع</lable>
+                        @Html.Editor("PaymentDetails.PaymentMethod", "ClientPaymentMethodEnum",
+                        new
+                           {
+                                 htmlAtt = new
+                               {
+                                   @class = "form-control",
+                                   @data_bind = "value:PaymentDetails.PaymentMethod,event:{change:ChangePaymentMethod}",
+                               }
+                           })
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>المبلغ المدفوع</lable>
+                        <input type="text" class="form-control" data-bind="value:PaymentDetails.PaymentAmount" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>تاريخ الدفع</lable>
+                        <input class="form-control dateSamll " data-bind="value:PaymentDetails.PaymentDate" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>رقم الايصال</lable>
+                        <input type="text" class="form-control" data-bind="value:PaymentDetails.RecieptNumber" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <lable>الـبــيــان</lable>
+                        <textarea class="form-control" rows="3" cols="5" data-bind="value:PaymentDetails.Description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                            <lable data-bidn="visible:PaymentDetails.IsCheck != true" hidden>اختر الحساب</lable>
+                            @Html.Editor("PaymentDetails.SafeAccNum", "SafeAccountList", new
+                       {
+                           htmlAtt = new
+                           {
+                               @class = "form-control",
+                               @data_bind = "value:PaymentDetails.SafeAccNum,visible:PaymentDetails.IsSafe"
+                           }
+                       })
+
+                            @Html.Editor("PaymentDetails.BankAccNum", "BankAccountList", new
+                       {
+                           htmlAtt = new
+                           {
+                               @class = "form-control",
+                               @data_bind = "value:PaymentDetails.BankAccNum,visible:PaymentDetails.IsBank || PaymentDetails.IsCheck"
+                           }
+                       })
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- خيارات الشيك تاريخ الكتابة وتاريخ الاستحقاق-->
+        <div class="container">
+            <div class="row">
+                <div class="col-4" data-bind="visible:PaymentDetails.IsCheck">
+                    <div class="form-group">
+                        <lable>رقم الشيك</lable>
+                        <input type="text" class="form-control" data-bind="value:PaymentDetails.CheckNum" />
+                    </div>
+                </div>
+
+                <div class="col-4" data-bind="visible:PaymentDetails.IsCheck">
+                    <div class="form-group">
+                        <lable>من بنك</lable>
+                        <input type="text" class="form-control" data-bind="value:PaymentDetails.OriginalBank" />
+                    </div>
+                </div>
+
+                <div class="col-4" data-bind="visible:PaymentDetails.IsCheck">
+                    <div class="form-group">
+                        <lable>تاريخ الاستحقاق</lable>
+                        <input type="text" class="form-control dateSamll" data-bind="value:PaymentDetails.PaymentDueDate" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <button class="btn btn-primary" data-bind="click:Save"> حفظ</button>
+        </div>
+    </card>
+
+</div>
+@section Scripts{
+
+    <script src="~/lib/knockout/knockout-3.5.0.js"></script>
+    <script src="~/lib/knockout.mapping/knockout.mapping.js"></script>
+    <script src="~/App/ClientPayment.js" asp-append-version="true"></script>
+    <script>
+        var ClientPayment = new ClientPaymentVM(@Html.Raw(data));
+        ko.applyBindings(ClientPayment);
+    </script>
+}
+
+

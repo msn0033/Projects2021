@@ -1,0 +1,13 @@
+﻿
+<div class="bg-light border p-2 mb-3 col-5 offset-1">
+    <h4 class="text-secondary">Amenity - @Amenity.Id</h4>
+    @Amenity.AmenityName <br />
+    @Amenity.AmenityInfo <br />
+</div>
+
+
+@code {
+    [Parameter]
+
+    public Amenity Amenity { get; set; }
+}

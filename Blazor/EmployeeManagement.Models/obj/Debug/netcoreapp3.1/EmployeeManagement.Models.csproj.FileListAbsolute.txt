@@ -1,0 +1,4 @@
+D:\PROJECT\Blazor\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.csprojAssemblyReference.cache
+D:\PROJECT\Blazor\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.AssemblyInfoInputs.cache
+D:\PROJECT\Blazor\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.AssemblyInfo.cs
+D:\PROJECT\Blazor\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.csproj.CoreCompileInputs.cache

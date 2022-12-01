@@ -1,0 +1,9 @@
+﻿body {
+    text-align: end;
+    font-family: 'arefruqaa-bold';
+}
+
+@font-face {
+    font-family: 'arefruqaa-bold';
+    src: url('arefruqaa-bold.ttf') format('truetype'), url('arefruqaa-regular.ttf') format('truetype');
+}

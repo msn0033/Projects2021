@@ -1,0 +1,8 @@
+<input type="text" class="form-control" placeholder="title"
+[(ngModel)]="task.Title"
+ >
+<textarea class="form-control" placeholder="Description" [(ngModel)]="task.Descrption"></textarea>
+<button class="btn btn-primary m-1" (click)="editTask()">Edit</button>
+<button class="btn btn-danger m-1" (click)="DeleteTask()">Delete</button>
+<button class="btn btn-danger m-1" routerLink="/">Cancle</button>
+

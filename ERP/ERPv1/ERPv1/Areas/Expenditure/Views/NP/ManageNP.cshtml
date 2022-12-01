@@ -1,0 +1,125 @@
+﻿@model ERPv1.ERP.CurrentLiabilitiesModules.NotesPayableModule.ViewModel.NPContainer
+@using Newtonsoft.Json
+@{ string data = JsonConvert.SerializeObject(Model);}
+
+@{
+    ViewData["Title"] = "ManageNP";
+}
+
+    <div data-bind="visible:IsMessageAreaVisible">
+        <card title="قائمة الاخطاء" header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+            <ul data-bind="foreach:Messages">
+                <li class="alert-danger" data-bind="text:$data"></li>
+            </ul>
+
+        </card>
+    </div>
+    <div data-bind="visible:IsWaitingAreaVisible" class="preload fa fa-spin fa-spinner" style="font-size:150px">
+
+    </div>
+    <div data-bind="visible:IsDetailAreaVisible">
+        <card title=" شيكات تحت الصرف " header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+            <table class="table table-bordered table-striped table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>أسم المورد</th>
+                        <th>رقم الشيك</th>
+                        <th>المبلغ</th>
+                        <th>العملة</th>
+                        <th>المبلغ بالعملة المحلية</th>
+                        <th>تاريخ التحرير</th>
+                        <th>تاريخ الاستحقاق</th>
+                        <th>البنك</th>
+                        <th></th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:CheckUnderCollection">
+
+                    <tr>
+
+                        <td><span data-bind="text:SupplierName"></span></td>
+
+                        <td><span data-bind="text:ChkNum"></span></td>
+
+                        <td><span data-bind="text:AmountForgin"></span></td>
+
+                        <td><span data-bind="text:CurrencyAbbrev"></span></td>
+                        <td><span data-bind="text:AmountLocal"></span></td>
+                        <td><span data-bind="text:WritingDate"></span></td>
+                        <td><span data-bind="text:DueDate"></span></td>
+                        <td><span data-bind="text:BankName"></span></td>
+                        <!--BankAccountNum-->
+                        <td>
+                            <button class="btn btn-primary" data-bind="click:$parent.Collect">صرف</button>
+                            <button class="btn btn-danger" data-bind="click:$parent.MoveToCash">صرف نقدي</button>
+
+                        </td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </card>
+
+        <card title=" شيكات للدفع النقدي " header-back-ground="bg-primary" text-color="text-white" addational-class="fa-edit">
+
+            <table class="table table-bordered table-striped table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>أسم المورد</th>
+                        <th>رقم الشيك</th>
+                        <th>المبلغ</th>
+                        <th>العملة</th>
+                        <th>المبلغ بالعملة المحلية</th>
+                        <th>تاريخ التحرير</th>
+                        <th>تاريخ الاستحقاق</th>
+                        <th>البنك</th>
+                        <th>المبلغ المدفوع من الشيك</th>
+
+
+
+
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:CheckCashCollection">
+
+                    <tr style="cursor:pointer" data-bind="click:$parent.SelectNote,css:{selected:ChkNum()==$parent.SelectedNote.ChkNum()}">
+
+                        <td><span data-bind="text:SupplierName"></span></td>
+
+                        <td><span data-bind="text:ChkNum"></span></td>
+
+                        <td><span data-bind="text:AmountForgin"></span></td>
+
+                        <td><span data-bind="text:CurrencyAbbrev"></span></td>
+                        <td><span data-bind="text:AmountLocal"></span></td>
+                        <td><span data-bind="text:WritingDate"></span></td>
+                        <td><span data-bind="text:DueDate"></span></td>
+                        <td><span data-bind="text:BankName"></span></td>
+                        <td><span data-bind="text:Paid"></span></td>
+
+                        <!--BankAccountNum-->
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </card>
+        <vc:supplier-payment-method-components></vc:supplier-payment-method-components>
+    </div>
+
+    @section Scripts{
+
+        <script src="~/lib/knockout/knockout-3.5.0.js"></script>
+        <script src="~/lib/knockout.mapping/knockout.mapping.js"></script>
+        <script src="~/App/NotesPayable.js" asp-append-version="true"></script>
+        <script>
+        var NP = new NPVM(@Html.Raw(data));
+        ko.applyBindings(NP);
+        </script>
+    }

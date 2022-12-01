@@ -1,0 +1,119 @@
+﻿@model ERPv1.ERP.GeneralLedgerModule.AccountCharts.ViewModel.UpdateAccountVM
+
+@{
+    ViewData["Title"] = "تعديل الحساب";
+}
+    <form asp-action="Edit">
+        <div class="Card">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="container">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>حساب جديد</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4 AccNum">
+                                <div class="form-group">
+                                    <label asp-for="AccNum" class="control-label"></label>
+                                    <input asp-for="AccNum" class="form-control" disabled="disabled" />
+                                    <input type="hidden" asp-for="AccNum"/>
+                                    <span asp-validation-for="AccNum" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-4 Balance">
+                                <div class="form-group">
+                                    <label asp-for="Balance" class="control-label"></label>
+                                    <input asp-for="Balance" class="form-control" disabled="disabled" />
+                                    <span asp-validation-for="Balance" class="text-danger"></span>
+                                    <input type="hidden" asp-for="Balance" />
+
+                                </div>
+                            </div>
+                            <div class="col-4 space"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4 AccountName">
+                                <div class="form-group">
+                                    <label asp-for="AccountName" class="control-label"></label>
+                                    <input asp-for="AccountName" class="form-control" />
+                                    <span asp-validation-for="AccountName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-4 AccountNameAr">
+                                <div class="form-group">
+                                    <label asp-for="AccountNameAr" class="control-label"></label>
+                                    <input asp-for="AccountNameAr" class="form-control" />
+                                    <span asp-validation-for="AccountNameAr" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-4 space">  </div>       
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label asp-for="CurrencyId" class="control-label"></label>
+                                    @Html.EditorFor(x => x.CurrencyId, "CurrencyList", new { htmlAtt = new { @class = "form-control" } })
+                                    <span asp-validation-for="CurrencyId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label asp-for="BranchId" class="control-label"></label>
+                                    @Html.EditorFor(x => x.BranchId, "BranchList", new { htmlAtt = new { @class = "form-control" } })
+                                    <span asp-validation-for="BranchId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label asp-for="IsActive" class="">نشط</label>
+                                    <input asp-for="IsActive" type="checkbox" class="form-control"  />
+                                    <span asp-validation-for="IsActive" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer text-center text-white">
+                        <input type="submit" value="حفظ التعديلات" class="btn btn-primary" />
+                        <a asp-action="Index" class="float-left">Back to List</a>
+                    </div>
+                </div>
+            </div>
+    </form>
+ @section Scripts{ 
+@*@{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+ }
+
+
+@*<div class="Card">
+        <div class="container">
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>حساب جديد</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+
+                </div>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>*@

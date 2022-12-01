@@ -1,0 +1,151 @@
+I'm struggling to load data inside my angular material table. The columnheaders show as expected except there are now rows of data. The weird thing is that there is data in the data source that is used by the table. See the code (or images) below:
+
+***Object type to populate datasource***
+```
+export default interface UserStripeTableResource {
+    id: number;
+    fullName: string;
+    saldo: number;
+    totalstripes: number;
+} 
+```
+This is the interface used to populate the list for the table, no weird things I think.
+
+***Component (.ts file)***
+```
+@Component({
+  selector: 'app-admin-editsaldo',
+  templateUrl: './admin-editsaldo.component.html',
+  styleUrls: ['./admin-editsaldo.component.css']
+})
+export class AdminEditsaldoComponent implements OnInit {
+
+  @Input() allusersstripes: UserStripeTableResource[];
+  @Output() RefreshListOfUsers = new EventEmitter<any>();
+
+
+  dataSource: MatTableDataSource<UserStripeTableResource> = new MatTableDataSource();
+  dataDisplayedColumns: string[] = ['id', 'fullName', 'saldo', 'totalstripes'];
+
+  selectedamount: number = null;
+
+  constructor(
+  ) { }
+
+  ngOnChanges(changes: SimpleChange): void {
+  }
+
+  ngOnInit() {
+    this.dataSource = new MatTableDataSource(this.allusersstripes);
+    console.log(this.dataSource.data);
+  }
+```
+The file that handles the logic for populating the table. As you can see the data is provided by a parent provider (see @input). The data is immediately assigned to the datasource in the ngOnInit. Also the columns are specified correctly, as they are shown on the html page.
+
+***HTML Page***
+```
+<div *ngIf="dataSource">
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="fullName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Naam </th>
+            <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="saldo">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Saldo </th>
+            <td mat-cell *matCellDef="let element"> {{element.saldo}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="totalstripes">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Totaal strepen </th>
+            <td mat-cell *matCellDef="let element"> {{element.totalstripes}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="dataDisplayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: dataDisplayedColumns;"></tr>
+    </table>
+
+</div>
+```
+The html page that should show the table. The columns match the names specified in the .ts file and are the same as the object properties.
+
+[Image showing html page with datasource log][1]
+
+Things that I already tried:
+1. Double checking if every needed module was imported correctly.
+2. Using ngIf before rendering the table, to make sure the datasource is populated before the table is being rendered.
+3. Print out the datasource as JSON straight on html page, to double check if it is there before the table is rendered.
+4. Try with the given example from angular material site itself, that's working (but it uses static data so not really comparable I guess)
+5. Try ngIf on in parent component on child component, to make sure the async data is there before the component is actually rendered.
+
+I'm really out of ideas, already struggling a couple a days on this. I really hope that someone can help me out :).
+
+
+[The html source (with no custom css source)][2]
+
+***List of packages used***
+
+```
+brandfonds-website@0.0.0 E:\Prive Projecten\Coding\Brandfonds\Brandfonds-Frontend
+├── @angular-devkit/build-angular@0.1100.7
+├── @angular/animations@11.1.0
+├── @angular/cdk@11.1.0
+├── @angular/cli@11.1.1
+├── @angular/common@11.1.0
+├── @angular/compiler-cli@11.1.0
+├── @angular/compiler@11.1.0
+├── @angular/core@11.1.0
+├── @angular/flex-layout@11.0.0-beta.33
+├── @angular/forms@11.1.0
+├── @angular/language-service@11.1.0
+├── @angular/localize@11.1.0
+├── @angular/material@11.1.0
+├── @angular/platform-browser-dynamic@11.1.0
+├── @angular/platform-browser@11.1.0
+├── @angular/router@11.1.0
+├── @fortawesome/fontawesome-free@5.15.2
+├── @full-fledged/alerts@11.0.0
+├── @types/chart.js@2.9.30
+├── @types/jasmine@3.3.16
+├── @types/jasminewd2@2.0.8
+├── @types/node@8.9.5
+├── animate.css@4.1.1
+├── chart.js@2.9.4
+├── codelyzer@5.2.2
+├── font-awesome@4.7.0
+├── hammerjs@2.0.8
+├── jasmine-core@3.4.0
+├── jasmine-spec-reporter@4.2.1
+├── karma-chrome-launcher@2.2.0
+├── karma-coverage-istanbul-reporter@2.0.6
+├── karma-jasmine-html-reporter@1.5.4
+├── karma-jasmine@2.0.1
+├── karma@5.1.1
+├── ng-swagger-gen@2.3.0
+├── protractor@7.0.0
+├── rxjs@6.6.3
+├── ts-node@7.0.1
+├── tslib@2.1.0
+├── tslint@6.1.3
+├── typescript@4.0.5
+└── zone.js@0.11.3
+```
+
+
+
+  [1]: https://i.stack.imgur.com/qe3nv.png
+  [2]: https://i.stack.imgur.com/wLono.png

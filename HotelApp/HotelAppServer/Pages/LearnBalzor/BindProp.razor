@@ -1,0 +1,136 @@
+﻿@page "/bindprop"
+@using Model
+
+
+<div class="bg-light border p-2">
+
+
+    <h2 class="bg-light border p-2">
+
+        RoomName = @om.RoomName
+        <br />
+        price = @om.Price
+        <br />
+    </h2>
+    <input type="number" @bind-value="om.Price" @bind-value:event="oninput" />
+    <br />
+    <input type="checkbox" @bind-value="om.IsActive" checked="@(om.IsActive?"checked":null)" />
+    <span>
+        this Room is @(om.IsActive?"Active":"InActive")
+    </span>
+    <br />
+    <select @bind="SelectedRoomProp">
+        @foreach (var prop in om.RoomProps)
+        {
+            <option value="@prop.Name">@prop.Name</option>
+        }
+    </select>
+    <span>Room prop Selected : @SelectedRoomProp </span>
+
+
+</div>
+
+<div>
+    <br />
+    <h2 class="text-info">Room List</h2>
+
+    <table class="table table-dark">
+        @foreach (var room in RoomList)
+        {
+            <tr>
+                <td>
+                    <input type="text" @bind-value="room.RoomName" @bind-value:event="oninput" />
+                </td>
+                <td>
+                    <input type="text" @bind-value="room.Price" @bind-value:event="oninput" />
+                </td>
+                @foreach (var roomprop in room.RoomProps)
+                {
+                    <td>@roomprop.Name - @roomprop.Value</td>
+                }
+            </tr>
+        }
+    </table>
+</div>
+<br />
+@foreach (var room in RoomList)
+{
+    <p>@room.RoomName's price is @room.Price</p>
+}
+
+@code{
+    string SelectedRoomProp = "";
+    List<Room> RoomList = new List<Room>();
+    Room om = new Room()
+    {
+        Id = 1,
+        RoomName = "football",
+        Price = 350,
+        IsActive = true,
+        RoomProps = new List<RoomProp>()
+    {
+            new RoomProp()
+            {
+
+                Id=1,
+                Name="Area",
+                Value="300"
+            },
+            new RoomProp()
+            {
+
+                Id=2,
+                Name="Occupancy",
+                Value="5"
+            },
+
+        }
+
+
+    };
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        RoomList.Add(new Room()
+        {
+            Id = 101,
+            RoomName = "king Suite",
+            Price = 1200,
+            RoomProps = new List<RoomProp>()
+{
+            new RoomProp()
+            {
+                Id=1,
+                Name="Area",
+                Value="300"
+            },
+             new RoomProp(){
+            Id=2,
+            Name="Occupancy",
+            Value="1"
+            }
+            }
+        });
+        RoomList.Add(new Room()
+        {
+
+            Id = 201,
+            RoomName = "Single Room",
+            IsActive = true,
+            Price = 300,
+            RoomProps = new List<RoomProp>() {
+            new RoomProp(){
+            Id=1,
+            Name="Area",
+            Value="30"
+            },
+            new RoomProp(){
+            Id=2,
+            Name="Occupancy",
+            Value="1"
+            },
+            }
+        });
+    }
+}

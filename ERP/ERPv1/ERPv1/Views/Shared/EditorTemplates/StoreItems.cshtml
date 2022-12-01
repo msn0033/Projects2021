@@ -1,0 +1,17 @@
+﻿@inject ERPv1.Data.ApplicationDbContext _dbcontex
+@model dynamic
+@{ 
+    var Storeitem = _dbcontex.StoreItems.Select(x => new SelectListItem
+    {
+        Value = x.Id.ToString(),
+        Text = x.NameAr
+    }
+    ).OrderBy(x => x.Text).ToList();
+
+}
+@{ 
+    var htmlAtt = ViewData["htmlAtt"] ?? new { };
+
+}
+@Html.DropDownList("", Storeitem, "--اختار--", htmlAtt)
+

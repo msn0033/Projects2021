@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Officer.Data.Category>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+    <div class="jumbotron">
+        
+            <h1> مرحبا لقسم التوظيف</h1>
+            <p>هذا القسم مهتم في التوظيف نتمنى تجد ماتطلب من توظيف لدينا</p>
+            <hr class="my-4" />
+            <p>الوظائف الخاصة تتطلب شهادة جامعية ، او خبرة في مجال الكمبيوتر بدون شهادة</p>
+            <a class="btn btn-info text-white"><i class="fa fa-angle-left"> </i> تفاصيل اكثر</a>
+    </div>
+
+@foreach (var item in Model)
+{
+<div class="card mt-3">
+    <div class="card-header bg-secondary text-white">
+        <h1>@item.categoryName</h1>
+    </div>
+    <div class="card-body p-sm-3">
+        <h5>@item.categoryDiscription</h5>
+
+        <div class="row">
+            @foreach (var it in item.Jobs)
+            {
+                <div class="col-sm-3 mr-3 pt-3 img-thumbnail">
+                    <div style="text-align:center;">
+                        <img src="https://dummyimage.com/200x200/d17dd1/fff.jpg" alt="Alternate Text" class="img-thumbnail" style="max-width:200px;max-height:200px; " />
+                    </div>
+             
+                    <div style="padding-right:30px">
+                        <h2 class="">@it.jobTitle</h2>
+                        <h5 class="">@it.jobContent</h5>
+                        <button class="btn btn-outline-info">التفاصيل</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div> 
+}
